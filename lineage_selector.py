@@ -1,12 +1,13 @@
+"""
+author Alexandros Papagiannakis, HHMI @Stanford University, 2025
+"""
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import pickle
 import lineator as linpy
 
-# -----------------------------------------------#
-#  Unaltered Interactive Selection Function      #
-# -----------------------------------------------#
 def select_points_from_plot(df_to_plot, x_col='frame', y_col='y', z_col='cell_trajectory_id'):
     trajectory_ids = []
     selected_indices = []
@@ -138,4 +139,5 @@ def save_lineage_data(all_lineage_data, save_path):
     with open(save_path+'/all_lineages_data', 'wb') as handle:
         pickle.dump(all_lineage_data, handle)
     
+
 
