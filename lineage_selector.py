@@ -41,16 +41,12 @@ def select_points_from_plot(df_to_plot, x_col='frame', y_col='y', z_col='cell_tr
         
     return trajectory_ids
 
-# ----------------------------------------------------#
-#  MODIFIED Main Script Logic with TERMINAL CONFIRMATION #
-# ----------------------------------------------------#
+
 def select_lineages(linked_df):
     all_lineage_data = {}
-
     for exp in linked_df.experiment.unique():
         exp_df = linked_df[linked_df.experiment == exp]
         
-        # --- NEW: Convert `for pos` loop to a `while` loop for manual control ---
         positions = exp_df.position_int.unique()
         pos_index = 0
         while pos_index < len(positions):
@@ -119,7 +115,6 @@ def select_lineages(linked_df):
                         print(f"  > Stored lineage data for ({exp}, {pos}).")
                     reselect_current_position = False
 
-            # --- NEW: Terminal confirmation step ---
             advance_to_next = False
             while not advance_to_next:
                 user_input = input("3/3: Move to next position? (yes/no): ").lower().strip()
@@ -139,5 +134,6 @@ def save_lineage_data(all_lineage_data, save_path):
     with open(save_path+'/all_lineages_data', 'wb') as handle:
         pickle.dump(all_lineage_data, handle)
     
+
 
 
