@@ -14,3 +14,6 @@ This nomenclature can party be adjusted in the <code> select_points_from_plot(df
 The <compute_lineage> function is implemented in the <code> lineage_selector.py </code> script which opens a graphic interface to select sell lineages for each microfluidics channel (<code>"position_int"</code>), field of view and experiment (<code>"experiment"</code>: contains both the date and the xy position). The lineage is drawn backwards, from past to present. The result is a list, which contains all cell trajectory IDs in the lineage, and a dictionary which matches the cell_trajectory_id of each mother cell, with that of its sister. 
 
 ![Alt text](https://github.com/alexSysBio/microlineagePy/blob/main/lineage_figure_5.png)
+
+To run the graphical interface simply call the <code> all_lineage_data = select_lineages(pandas_dataframe) </code> function, from the <code> lineage_selector.py </code> script. Then you will be guided through the process as shown in the image above.
+
