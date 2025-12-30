@@ -11,4 +11,4 @@ The <code>compute_lineage</code> function inside the <code>lineator.py</code> sc
 
 The <compute_lineage> function is implemented in the <code> lineage_selector.py </code> script which opens a graphic interface to select sell lineages for each microfluidics channel (<code>"position_int"</code>), field of view and experiment ((<code>"experiment"</code>)). The lineage is drawn backwards, from past to present. The result is a list, which contains all cell trajectory IDs in the lineage, and a dictionary which matches the cell_trajectory_id of each mother cell, with that of its sister. 
 
-![Alt text]()
+![Alt text](https://github.com/alexSysBio/microlineagePy/blob/main/lineage_figure_5.png)
