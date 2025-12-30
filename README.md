@@ -15,7 +15,7 @@ The <compute_lineage> function is implemented in the <code> lineage_selector.py 
 
 ![Alt text](https://github.com/alexSysBio/microlineagePy/blob/main/lineage_figure_5.png)
 
-To run the graphical interface simply call the <code> all_lineage_data = select_lineages(pandas_dataframe) </code> function, from the <code> lineage_selector.py </code> script. Then you will be guided through the process as shown in the image above.
+To run the graphical interface simply call the <code> all_lineage_data = select_lineages(pandas_dataframe) </code> function, from the <code> lineage_selector.py </code> script. Then you will be guided through the process as shown in the image above. Keep an eye in the console, since the code allows for errors to be corrected even after pressing "ENTER". The user has to type "y" to proceed to the next microfluidics channel, or "n" to repeat the previous one. This extra step improves significantly the lineage selection experience. 
 
 The <code> all_lineage_data </code> variable can then be stored at the desired location using the <code> save_lineage_data(all_lineage_data, save_path) </code> function.
 
