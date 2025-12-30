@@ -17,3 +17,5 @@ The <compute_lineage> function is implemented in the <code> lineage_selector.py 
 
 To run the graphical interface simply call the <code> all_lineage_data = select_lineages(pandas_dataframe) </code> function, from the <code> lineage_selector.py </code> script. Then you will be guided through the process as shown in the image above.
 
+The <code> all_lineage_data </code> variable can then be stored at the desired location using the <code> save_lineage_data(all_lineage_data, save_path) </code> function.
+
